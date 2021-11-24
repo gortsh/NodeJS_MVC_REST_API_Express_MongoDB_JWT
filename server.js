@@ -5,6 +5,13 @@ dotEnv.config();
 
 const app = express();
 
+const myMiddleware = (req, res, next) => {
+    console.log('Hei middle');
+    next();
+}
+
+app.use(myMiddleware);
+
 app.get('/', (req, res, next) => {
     res.send('Test nodemon')
 });
