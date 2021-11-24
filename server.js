@@ -6,7 +6,7 @@ dotEnv.config();
 const app = express();
 
 app.get('/', (req, res, next) => {
-    res.send('Test')
+    res.send('Test nodemon')
 });
 
 const PORT = process.env.PORT || 3000;
