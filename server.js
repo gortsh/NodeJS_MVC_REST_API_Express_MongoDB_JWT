@@ -18,6 +18,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+//api
+app.use('/api/v1/product', require('./routes/productRoutes'));
+
 /*const myMiddleware = (req, res, next) => {
     console.log('middle');
     next();
