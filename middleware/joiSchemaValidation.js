@@ -1,8 +1,8 @@
 const joi = require('@hapi/joi');
-const { schema } = require('../database/models/productModel');
+
 
 const validateObjectSchema = (data, schema) => {
-    const result = joi.validate(data, schema);
+    const result = Joi.validate(data, schema);
     console.log('Joi Schema Validateion Result =', result);
 }
 
